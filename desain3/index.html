@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinergi Digital | Website Sekolah Profesional & PPDB Online</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-light: #60a5fa;
+            --secondary: #06b6d4;
+            --accent: #facc15;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(37, 99, 235, 0.1);
+            --spring-easing: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+            --shadow-strong: 0 20px 40px -15px rgba(37, 99, 235, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        /* SCROLLBAR */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-body);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary);
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: all 0.4s var(--spring-easing);
+        }
+
+        nav.scrolled {
+            padding: 12px 0;
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--glass-border);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary);
+            font-weight: 800;
+            font-size: 1.5rem;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 200px 0 120px;
+            background:
+                radial-gradient(circle at 0% 0%, rgba(37, 99, 235, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 100% 100%, rgba(6, 182, 212, 0.05) 0%, transparent 40%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.08), transparent 70%);
+            filter: blur(80px);
+            z-index: -1;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 700;
+            border-radius: 100px;
+            margin-bottom: 24px;
+            animation: fadeInDown 0.8s var(--spring-easing);
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -2px;
+            background: linear-gradient(135deg, var(--text-main), #4a5568);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 48px;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s var(--spring-easing);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+            box-shadow: var(--shadow-strong);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-outline {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            color: var(--text-main);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .btn-outline:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* TRUST BANNER */
+        .trust-banner {
+            background: #fff;
+            border-top: 1px solid #f1f5f9;
+            border-bottom: 1px solid #f1f5f9;
+            padding: 64px 0;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .trust-item h3 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .trust-item p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* CARDS & GRIDS */
+        h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 60px;
+            letter-spacing: -1px;
+        }
+
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .pain-card {
+            background: #fff;
+            padding: 48px;
+            border-radius: 24px;
+            border: 1px solid #f1f5f9;
+            transition: all 0.4s var(--spring-easing);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .pain-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-light);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .pain-icon {
+            width: 64px;
+            height: 64px;
+            background: rgba(37, 99, 235, 0.05);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 32px;
+        }
+
+        .pain-card h3 {
+            margin-bottom: 16px;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .pain-card p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* SERVICE CARD */
+        .service-card {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 80px;
+            align-items: center;
+            background: #fff;
+            padding: 80px;
+            border-radius: 32px;
+            box-shadow: var(--shadow-strong);
+        }
+
+        .service-features {
+            list-style: none;
+            margin: 32px 0 40px;
+        }
+
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .service-features li:before {
+            content: '✓';
+            width: 24px;
+            height: 24px;
+            background: rgba(6, 182, 212, 0.1);
+            color: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.8rem;
+        }
+
+        .service-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-strong);
+        }
+
+        /* PRICING */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 32px;
+        }
+
+        .pricing-card {
+            background: #fff;
+            padding: 56px 40px;
+            border-radius: 32px;
+            border: 1px solid #f1f5f9;
+            transition: all 0.4s var(--spring-easing);
+            position: relative;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-card.featured {
+            background: var(--primary);
+            color: #fff;
+            transform: scale(1.05);
+            z-index: 10;
+        }
+
+        .pricing-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .price .amount {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 32px;
+            letter-spacing: -2px;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            margin-bottom: 40px;
+            border-top: 1px dashed #e2e8f0;
+            padding-top: 32px;
+        }
+
+        .pricing-card.featured ul {
+            border-top-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .pricing-card ul li {
+            margin-bottom: 16px;
+            font-size: 1rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-price {
+            display: block;
+            text-align: center;
+            padding: 18px;
+            background: var(--text-main);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .pricing-card.featured .btn-price {
+            background: #fff;
+            color: var(--primary);
+        }
+
+        /* FINAL CTA */
+        .final-cta {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            text-align: center;
+            color: #fff;
+            border-radius: 40px;
+            margin: 0 20px 100px;
+            padding: 100px 40px;
+        }
+
+        .final-cta h2 {
+            color: #fff;
+        }
+
+        /* WHATSAPP FLOAT */
+        .wa-float {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background: #25d366;
+            color: #fff;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s var(--spring-easing);
+            animation: wa-pulse 2s infinite;
+        }
+
+        .wa-float:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        @keyframes wa-pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+            }
+
+            70% {
+                box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* REVEAL */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s var(--spring-easing);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 968px) {
+            section {
+                padding: 60px 0;
+            }
+
+            .service-card {
+                grid-template-columns: 1fr;
+                padding: 40px;
+            }
+
+            .hero {
+                padding: 160px 0 80px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .final-cta {
+                margin: 0 0 60px;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m4 6 8-4 8 4" />
+                    <path d="m18 10 4 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8l4-2" />
+                    <path d="M14 22v-4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v4" />
+                    <path d="m18 5-1.25 3" />
+                    <path d="M15 13a3 3 0 0 0-6 0" />
+                </svg>
+                SinergiDigital
+            </a>
+            <ul class="nav-links">
+                <li><a href="#masalah">Masalah</a></li>
+                <li><a href="#layanan">Layanan</a></li>
+                <li><a href="#harga">Harga</a></li>
+            </ul>
+            <a href="https://wa.me/6282133460786" class="btn btn-primary"
+                style="padding: 10px 24px; font-size: 0.9rem;">Konsultasi Gratis</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <span class="badge">🏫 Solusi Digital Sekolah & Pesantren</span>
+            <h1 class="reveal">Sekolah Profesional Dimulai Dari Website Yang Meyakinkan.</h1>
+            <p class="reveal">Tingkatkan kepercayaan wali murid dan permudah sistem pendaftaran dengan website premium
+                yang dirancang khusus untuk institusi pendidikan.</p>
+            <div class="btn-group reveal">
+                <a href="https://wa.me/6282133460786" class="btn btn-primary">🔥 Tingkatkan Pendaftar</a>
+                <a href="#layanan" class="btn btn-outline">Lihat Layanan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST STATS -->
+    <div class="trust-banner">
+        <div class="container trust-grid">
+            <div class="trust-item reveal">
+                <h3>150+</h3>
+                <p>Proyek Selesai</p>
+            </div>
+            <div class="trust-item reveal">
+                <h3>+50%</h3>
+                <p>Kenaikan Minat</p>
+            </div>
+            <div class="trust-item reveal">
+                <h3>98%</h3>
+                <p>Tepat Waktu</p>
+            </div>
+            <div class="trust-item reveal">
+                <h3>10+</h3>
+                <p>Thn Pengalaman</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROBLEMS -->
+    <section id="masalah">
+        <div class="container">
+            <h2 class="reveal">Kenapa PPDB Tidak Pernah Maksimal?</h2>
+            <div class="pain-grid">
+                <div class="pain-card reveal">
+                    <div class="pain-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>
+                    </div>
+                    <h3>Wali Murid Ragu</h3>
+                    <p>Website terlihat kuno membuat orang tua berpikir kualitas sekolah Anda juga ketinggalan zaman.
+                    </p>
+                </div>
+                <div class="pain-card reveal">
+                    <div class="pain-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                        </svg>
+                    </div>
+                    <h3>Info Berantakan</h3>
+                    <p>Informasi yang sulit dicari membuat calon wali murid bingung dan memilih sekolah kompetitor.</p>
+                </div>
+                <div class="pain-card reveal">
+                    <div class="pain-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <h3>Admin Kewalahan</h3>
+                    <p>Menjawab pertanyaan berulang di WA karena info di website tidak lengkap dan tidak jelas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE -->
+    <section id="layanan" style="background: #fff;">
+        <div class="container">
+            <div class="service-card reveal">
+                <div>
+                    <h3 style="color:var(--primary); font-size: 2.2rem; margin-bottom: 20px;">Website Yang "Menjual"
+                        Kualitas Sekolah</h3>
+                    <p>Bukan sekadar online, tapi platform yang mendatangkan murid. Terintegrasi, cepat, dan mudah
+                        dikelola bahkan oleh orang awam.</p>
+                    <ul class="service-features">
+                        <li>PPDB Online (Daftar ≤ 3 Menit)</li>
+                        <li>Profil Sekolah & Program Unggulan</li>
+                        <li>Management Berita & Prestasi</li>
+                        <li>SEO Lokal (Eksis di Google Search)</li>
+                    </ul>
+                    <a href="https://wa.me/6282133460786" class="btn btn-primary">Pesan Sekarang</a>
+                </div>
+                <div class="service-image">
+                    <img src="https://images.pexels.com/photos/14536291/pexels-photo-14536291.jpeg"
+                        alt="Dashboard Sekolah" style="width:100%; display:block;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="harga">
+        <div class="container">
+            <h2 class="reveal">Investasi Masa Depan Sekolah</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card reveal">
+                    <h4>Starter Kit</h4>
+                    <div class="price">
+                        <div class="amount">Rp 1.5jt<span>/sekali</span></div>
+                    </div>
+                    <ul>
+                        <li>Free Domain (.com) 1 Thn</li>
+                        <li>Hosting Bisnis (6 Bulan)</li>
+                        <li>Desain Ultra Responsif</li>
+                        <li>Landing Page Fokus Konversi</li>
+                    </ul>
+                    <a href="https://wa.me/6282133460786" class="btn-price">Pilih Starter</a>
+                </div>
+                <div class="pricing-card featured reveal">
+                    <h4>Professional</h4>
+                    <div class="price">
+                        <div class="amount">Rp 2.0jt<span>/sekali</span></div>
+                    </div>
+                    <ul>
+                        <li>Semua Fitur Starter</li>
+                        <li>Hosting Prioritas (1 Tahun)</li>
+                        <li>10+ Halaman Informasi</li>
+                        <li>CMS (Update Konten Sendiri)</li>
+                    </ul>
+                    <a href="https://wa.me/6282133460786" class="btn-price">Pesan Paling Laris</a>
+                </div>
+                <div class="pricing-card reveal">
+                    <h4>Enterprise Plus</h4>
+                    <div class="price">
+                        <div class="amount">Rp 4.5jt<span>/sekali</span></div>
+                    </div>
+                    <ul>
+                        <li>Semua Fitur Professional</li>
+                        <li>Sistem PPDB Terintegrasi</li>
+                        <li>Optimasi SEO Lanjutan</li>
+                        <li>Halaman Tak Terbatas</li>
+                    </ul>
+                    <a href="https://wa.me/6282133460786" class="btn-price">Hubungkan Sistem</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <div class="container">
+        <section class="final-cta reveal">
+            <h2>Siap Mengubah Wajah Digital Sekolah Anda?</h2>
+            <p style="margin-bottom: 40px; font-size: 1.2rem;">Konsultasikan kebutuhan Anda gratis. Biarkan kami yang
+                mengurus teknisnya, anda fokus pada pendidikannya.</p>
+            <a href="https://wa.me/6282133460786" class="btn btn-outline"
+                style="background: #fff; color: var(--primary); border: none; padding: 20px 48px; font-size: 1.1rem;">
+                🚀 Mulai Konsultasi Sekarang
+            </a>
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer
+        style="padding: 40px 0; text-align: center; background: #fff; border-top: 1px solid #f1f5f9; font-size: 0.9rem; color: var(--text-muted);">
+        <p>&copy; 2026 Sinergi Digital. Website Sekolah Profesional & PPDB Online.</p>
+    </footer>
+
+    <!-- WA BUTTON -->
+    <a href="https://wa.me/6282133460786" target="_blank" rel="noopener noreferrer" class="wa-float"
+        title="Chat di WhatsApp">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.438 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.435 5.61 1.436h.005c6.551 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <script>
+        // Reveal Observer
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const delay = entry.target.dataset.delay || 0;
+                    setTimeout(() => {
+                        entry.target.classList.add('active');
+                    }, delay);
+
+                    if (entry.target.classList.contains('trust-item')) {
+                        animateCounter(entry.target.querySelector('h3'));
+                    }
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal, .trust-item').forEach((el) => {
+            const grid = el.closest('.pain-grid, .pricing-grid, .trust-grid');
+            if (grid) {
+                const index = Array.from(grid.children).indexOf(el);
+                el.dataset.delay = index * 100;
+            }
+            revealObserver.observe(el);
+        });
+
+        // Counter Animation
+        function animateCounter(el) {
+            const target = parseFloat(el.innerText.replace(/[^0-9.]/g, ''));
+            const suffix = el.innerText.replace(/[0-9.]/g, '');
+            const duration = 2000;
+            const start = performance.now();
+
+            function update(now) {
+                const progress = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 4);
+                const current = progress === 1 ? target : (target * eased);
+                el.innerText = (target % 1 === 0 ? Math.floor(current) : current.toFixed(1)) + suffix;
+                if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+        }
+
+        // Navbar Scroll
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Jasa pembuatan website sekolah dan pesantren profesional. Tingkatkan jumlah pendaftar PPDB dengan website yang meyakinkan, modern, dan terpercaya.">
+    <meta name="keywords"
+        content="jasa pembuatan website sekolah, website pesantren profesional, pendaftaran siswa online, website pendidikan terbaik, solusi ppdb digital">
+    <title>Sinergi Digital | Website Sekolah Profesional & PPDB Online</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ========================================
+        SINERGI DIGITAL - PREMIUM AESTHETICS
+        ======================================== */
+
+        :root {
+            --primary: #facc15;
+            --primary-glow: rgba(250, 204, 21, 0.4);
+            --accent: #facc15;
+            --dark: #020617;
+            --dark-elevated: #0f172a;
+            --glass-bg: rgba(15, 23, 42, 0.7);
+            --glass-border: rgba(250, 204, 21, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --secondary: #3b82f6;
+            --danger: #ef4444;
+            --spring-easing: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* RESET & BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* SCROLLBAR */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: all 0.4s var(--spring-easing);
+        }
+
+        nav.scrolled {
+            padding: 12px 0;
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-decoration: none;
+            color: var(--text-main);
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* HERO */
+        .hero {
+            padding: 160px 0 100px;
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(250, 204, 21, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(250, 204, 21, 0.03) 0%, transparent 40%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: var(--primary-glow);
+            filter: blur(120px);
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(250, 204, 21, 0.1);
+            border: 1px solid var(--glass-border);
+            border-radius: 100px;
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            animation: fadeInDown 0.8s var(--spring-easing);
+        }
+
+        .hero-text h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            border-left: 3px solid var(--accent);
+            padding-left: 20px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* BUTTONS */
+        .btn {
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s var(--spring-easing);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--dark);
+            box-shadow: 0 10px 20px -5px var(--primary-glow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px -5px var(--primary-glow);
+        }
+
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: 0.5s;
+        }
+
+        .btn-primary:hover::after {
+            left: 100%;
+        }
+
+        .btn-outline {
+            border: 2px solid rgba(250, 204, 21, 0.3);
+            color: var(--accent);
+        }
+
+        .btn-outline:hover {
+            background: rgba(250, 204, 21, 0.05);
+            border-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* SCHOOL MOCKUP */
+        .school-mockup {
+            position: relative;
+            border-radius: 24px;
+            padding: 10px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.5);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .school-mockup img {
+            border-radius: 16px;
+            transition: 0.5s;
+        }
+
+        /* TRUST BANNER */
+        .trust-banner {
+            padding: 60px 0;
+            background: rgba(15, 23, 42, 0.5);
+            border-top: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .trust-item h3 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 8px;
+            font-weight: 800;
+        }
+
+        .trust-item p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* SECTION PADDING */
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* CARDS */
+        .pain-card,
+        .service-card,
+        .pricing-card {
+            background: var(--dark-elevated);
+            border-radius: 24px;
+            border: 1px solid var(--glass-border);
+            padding: 40px;
+            transition: all 0.4s var(--spring-easing);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pain-card:hover,
+        .pricing-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: rgba(250, 204, 21, 0.3);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.4);
+        }
+
+        .pain-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(250, 204, 21, 0.1);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            margin-bottom: 24px;
+        }
+
+        .service-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            padding: 60px;
+        }
+
+        .service-features {
+            list-style: none;
+            margin: 24px 0 32px;
+        }
+
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            color: var(--text-muted);
+        }
+
+        .service-features li svg {
+            color: var(--accent);
+        }
+
+        /* PRICING */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .pricing-card.featured {
+            background: linear-gradient(180deg, rgba(250, 204, 21, 0.05) 0%, var(--dark-elevated) 100%);
+            border: 2px solid var(--accent);
+            transform: scale(1.05);
+            z-index: 10;
+        }
+
+        .pricing-card .price {
+            margin-bottom: 32px;
+        }
+
+        .pricing-card .amount {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .pricing-card .amount span {
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        /* FAQ */
+        .faq-item {
+            margin-bottom: 16px;
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .faq-header {
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            background: var(--dark-elevated);
+        }
+
+        .faq-content {
+            padding: 0 24px;
+            max-height: 0;
+            transition: all 0.5s var(--spring-easing);
+            background: var(--dark-elevated);
+            color: var(--text-muted);
+            opacity: 0;
+        }
+
+        .faq-open .faq-content {
+            padding-bottom: 24px;
+            max-height: 200px;
+            opacity: 1;
+        }
+
+        .faq-open svg {
+            transform: rotate(180deg);
+        }
+
+        /* FINAL CTA */
+        .final-cta {
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(250, 204, 21, 0.1) 0%, var(--dark) 70%);
+        }
+
+        /* REVEAL ANIMATIONS */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s var(--spring-easing);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* RIPPLE EFFECT */
+        .ripple {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: scale(0);
+            animation: ripple-animation 0.6s linear;
+            pointer-events: none;
+        }
+
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* MOBILE OPTIMIZATION */
+        @media (max-width: 768px) {
+
+            .hero-grid,
+            .service-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text p {
+                border-left: none;
+                border-top: 3px solid var(--accent);
+                padding: 20px 0 0;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+        }
+
+        /* WHATSAPP FLOAT */
+        .wa-float {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            width: 60px;
+            height: 60px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            z-index: 10000;
+            transition: all 0.3s var(--spring-easing);
+            animation: wa-pulse 2s infinite;
+        }
+
+        .wa-float:hover {
+            transform: scale(1.1) translateY(-5px);
+            background-color: #20ba5a;
+            box-shadow: 0 8px 16px rgba(37, 211, 102, 0.6);
+        }
+
+        @keyframes wa-pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .wa-float {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m4 6 8-4 8 4" />
+                    <path d="m18 10 4 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8l4-2" />
+                    <path d="M14 22v-4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v4" />
+                    <path d="m18 5-1.25 3" />
+                    <path d="M15 13a3 3 0 0 0-6 0" />
+                </svg>
+                SinergiDigital
+            </a>
+            <ul class="nav-links">
+                <li><a href="#masalah">Masalah</a></li>
+                <li><a href="#layanan">Layanan</a></li>
+                <li><a href="#keunggulan">Keunggulan</a></li>
+                <li><a href="#harga">Harga</a></li>
+            </ul>
+            <a href="https://wa.me/6282133460786?text=Assalamualaikum%20Kak%2C%20saya%20tertarik%20untuk%20konsultasi%20pembuatan%20website%20sekolah%20premium.%20Mohon%20info%20detailnya%20ya%20%F0%9F%98%8A"
+                target="_blank" rel="noopener noreferrer" class="btn btn-primary"
+                style="padding: 12px 24px; font-size: 0.9rem;">Konsultasi Gratis</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <span class="badge">🏫 Dipercaya Sekolah & Pesantren yang Ingin Tumbuh Lebih Cepat</span>
+                    <h1 class="reveal">Sekolah yang Terlihat Profesional Selalu Dipilih Lebih Dulu.</h1>
+                    <p class="reveal">Di mata wali murid, kualitas sekolah dinilai sebelum mereka datang. Jika website
+                        Anda terlihat
+                        biasa saja, mereka tidak akan bertanya — mereka langsung memilih sekolah lain.</p>
+                    <div class="hero-cta reveal">
+                        <a href="https://wa.me/6282133460786?text=Assalamualaikum%20Kak%2C%20saya%20tertarik%20untuk%20meningkatkan%20pendaftar%20sekolah%20lewat%20website%20premium.%20Bisa%20dibantu%3F%20%F0%9F%98%8A"
+                            target="_blank" rel="noopener noreferrer" class="btn btn-primary">🔥 Tingkatkan Pendaftar
+                            Sekarang</a>
+                        <a href="#layanan" class="btn btn-outline">📊 Lihat Dampak & Hasil Nyata</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="school-mockup">
+                        <img src="https://images.pexels.com/photos/30945258/pexels-photo-30945258.jpeg"
+                            alt="Website Sekolah Premium"
+                            style="width:100%; height:320px; object-fit:cover; border-radius:12px; display:block;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST STATS -->
+    <section class="trust-banner">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <h3>150+</h3>
+                    <p>Sekolah & Pesantren Meningkat Pendaftar</p>
+                </div>
+                <div class="trust-item">
+                    <h3>+30-50%</h3>
+                    <p>Kenaikan Minat PPDB Setelah Website Aktif</p>
+                </div>
+                <div class="trust-item">
+                    <h3>98%</h3>
+                    <p>Kepuasan Pengelola Sekolah</p>
+                </div>
+                <div class="trust-item">
+                    <h3>10+ Thn</h3>
+                    <p>Pengalaman di Sistem Digital Pendidikan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAIN SECTION (PROBLEM) -->
+    <section class="section-padding pain-section" id="masalah">
+        <div class="container">
+            <div class="reveal" style="text-align: center; max-width: 800px; margin: 0 auto 60px;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Kenapa PPDB Tidak Pernah Maksimal?</h2>
+                <p style="font-size: 1.1rem; color: var(--text-muted);">Hampir semua sekolah menghadapi masalah yang
+                    sama, namun hanya sedikit yang berani memperbaikinya.</p>
+            </div>
+            <div class="pain-grid">
+                <div class="pain-card reveal">
+                    <div class="pain-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg></div>
+                    <h3>Wali Murid Ragu</h3>
+                    <p>Website terlihat kuno membuat orang tua berpikir kualitas sekolah Anda juga ketinggalan zaman.
+                    </p>
+                </div>
+                <div class="pain-card reveal">
+                    <div class="pain-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                        </svg></div>
+                    <h3>Info PPDB Berantakan</h3>
+                    <p>Informasi tersebar di berbagai platform membuat calon wali murid bingung dan memilih mundur.</p>
+                </div>
+                <div class="pain-card reveal">
+                    <div class="pain-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg></div>
+                    <h3>Admin Kewalahan</h3>
+                    <p>Menjawab pertanyaan yang sama setiap hari via WA karena informasi di website tidak jelas.</p>
+                </div>
+            </div>
+            <div class="reveal" style="text-align: center; margin-top: 60px; font-weight: 700; color: var(--danger);">
+                "Orang tua tidak membandingkan kualitas dari visi. Mereka membandingkan dari tampilan pertama."
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUSI & LAYANAN -->
+    <section class="section-padding" id="layanan">
+        <div class="container">
+            <div class="reveal" style="text-align: center; margin-bottom: 60px;">
+                <h2 style="font-size: 2.8rem;">Website Sekolah yang Bekerja</h2>
+                <p style="font-size: 1.2rem;">Mendatangkan Murid, Bukan Sekadar Online.</p>
+            </div>
+
+            <div class="service-card reveal">
+                <div>
+                    <h3 style="font-size: 2rem; margin-bottom: 20px;">Layanan Utama — Website Sekolah & Pesantren</h3>
+                    <p>Website terintegrasi untuk sekolah & pesantren yang ingin terlihat modern, mempermudah
+                        pendaftaran, dan mengelola info tanpa ribet.</p>
+                    <ul class="service-features">
+                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> PPDB Online (Daftar ≤ 3 Menit)</li>
+                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Profil Sekolah & Program Unggulan</li>
+                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Management Berita & Prestasi</li>
+                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> SEO Lokal (Mudah dicari di Google)</li>
+                    </ul>
+                    <a href="https://wa.me/6282133460786?text=Assalamualaikum%20Kak%2C%20saya%20tertarik%20dengan%20layanan%20Website%20Sekolah%20%26%20Pesantren.%20Mohon%20info%20detailnya.%20%F0%9F%98%8A"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-primary">Pesan Sekarang</a>
+                </div>
+                <div style="height: 100%; border-radius: 20px; overflow: hidden;">
+                    <img src="https://images.pexels.com/photos/14536291/pexels-photo-14536291.jpeg"
+                        alt="Sistem Dashboard Sekolah"
+                        style="width:100%; height:100%; object-fit:cover; display:block; min-height: 400px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEUNGGULAN (BENEFITS) -->
+    <section class="section-padding" id="keunggulan">
+        <div class="container">
+            <div class="reveal" style="text-align: center; margin-bottom: 60px;">
+                <h2 style="font-size: 2.5rem;">Keunggulan Nyata Untuk Sekolah</h2>
+            </div>
+            <div class="pain-grid">
+                <div class="pain-card reveal" style="border-left: 5px solid var(--secondary);">
+                    <h3>📈 Lebih Banyak Pendaftar</h3>
+                    <p>Website dirancang khusus untuk meyakinkan orang tua sejak 10 detik pertama.</p>
+                </div>
+                <div class="pain-card reveal" style="border-left: 5px solid var(--primary);">
+                    <h3>💸 Kurangi Biaya Operasional</h3>
+                    <p>Hemat jutaan rupiah biaya cetak brosur. Website menjawab pertanyaan 24 jam.</p>
+                </div>
+                <div class="pain-card reveal" style="border-left: 5px solid var(--accent);">
+                    <h3>⚡ Percepat Proses PPDB</h3>
+                    <p>Input mandiri oleh wali murid. Admin hanya fokus seleksi & konfirmasi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HARGA (PRICING) -->
+    <section class="section-padding pricing-section" id="harga">
+        <div class="container">
+            <div class="reveal" style="text-align: center; margin-bottom: 60px;">
+                <h2 style="font-size: 2.5rem;">Investasi Masa Depan Sekolah</h2>
+                <p>Harga transparan, hasil terjamin.</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- ENTRY PACKAGE -->
+                <div class="pricing-card reveal">
+                    <div class="price">
+                        <h4>Paket Entry</h4>
+                        <div class="amount">Rp 1.5jt<span> /sekali</span></div>
+                    </div>
+                    <ul class="service-features" style="flex-grow: 1;">
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Landing Page Berkualitas</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Maksimal 3 Halaman</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Domain & Hosting (1 Thn)</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Integrasi WhatsApp</li>
+                    </ul>
+                    <a href="https://wa.me/6282133460786?text=Assalamualaikum%20Kak%2C%20saya%20tertarik%20dengan%20Paket%20Entry%20website%20sekolah%20(1.5jt).%20Bisa%20dibantu%3F%20%F0%9F%98%8A"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-outline">Pilih Paket</a>
+                </div>
+
+                <!-- BASIC PACKAGE -->
+                <div class="pricing-card featured reveal">
+                    <div class="price">
+                        <h4>Paket Basic</h4>
+                        <div class="amount">Rp 2jt<span> /sekali</span></div>
+                    </div>
+                    <ul class="service-features" style="flex-grow: 1;">
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> 10 Halaman Utama</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Domain & Hosting (1 Thn)</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Desain Mobile Friendly</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Integrasi WhatsApp</li>
+                    </ul>
+                    <a href="https://wa.me/6282133460786?text=Assalamualaikum%20Kak%2C%20saya%20tertarik%20dengan%20Paket%20Basic%20website%20sekolah.%20Bisa%20dibantu%3F%20%F0%9F%98%8A"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-primary">Tingkatkan Pendaftar</a>
+                </div>
+
+                <!-- PRO PACKAGE -->
+                <div class="pricing-card reveal">
+                    <div class="price">
+                        <h4>Pro Business</h4>
+                        <div class="amount">Rp 4.5jt<span> /sekali</span></div>
+                    </div>
+                    <ul class="service-features" style="flex-grow: 1;">
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Halaman Tidak Terbatas</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Sistem PPDB Online</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> SEO Optimasi (On Page)</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> CMS (Edit Konten Sendiri)</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Support Teknis Prioritas</li>
+                    </ul>
+                    <a href="https://wa.me/6282133460786?text=Assalamualaikum%20Kak%2C%20saya%20tertarik%20dengan%20Paket%20Pro%20Business%20untuk%20sekolah%20saya.%20Mohon%20infonya.%20%F0%9F%98%8A"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-outline">Pilih Paket</a>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 30px; font-style: italic; color: var(--text-muted);">* Lebih murah
+                daripada kehilangan calon siswa setiap tahun.</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">Pertanyaan Seputar Website Sekolah</h2>
+            <div class="faq-container">
+                <div class="faq-item reveal">
+                    <div class="faq-header">
+                        <h4>Berapa lama pengerjaan website?</h4>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="faq-content">
+                        <p>Paket Basic memakan waktu 7-10 hari kerja. Paket Pro Business membutuhkan waktu 2-4 minggu
+                            karena adanya integrasi sistem PPDB.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="faq-header">
+                        <h4>Apakah admin sekolah bisa edit sendiri?</h4>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="faq-content">
+                        <p>Ya, tentu saja. Kami memberikan akses CMS yang user-friendly sehingga admin tidak perlu
+                            keahlian IT untuk mengupdate berita atau foto.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="faq-header">
+                        <h4>Apakah sudah termasuk domain & hosting?</h4>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="faq-content">
+                        <p>Betul, biaya sudah termasuk sewa domain dan hosting berkualitas untuk 1 tahun pertama.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta section-padding" style="background:#0f172a;">
+        <div class="container reveal">
+            <h2 style="font-size:3rem; margin-bottom: 20px;">Jangan Biarkan Bangku Kosong</h2>
+            <p style="font-size: 1.3rem; opacity: 0.8; max-width: 800px; margin: 0 auto 40px;">Setiap tahun ajaran
+                adalah kesempatan sekali. Sekolah yang siap secara digital, menang lebih awal.</p>
+            <a href="https://wa.me/6282133460786?text=Assalamualaikum%20Kak%2C%20saya%20siap%20konsultasi%20untuk%20pembuatan%20website%20sekolah%20sekarang.%20%F0%9F%98%8A"
+                target="_blank" rel="noopener noreferrer" class="btn btn-primary"
+                style="background: var(--accent); color: var(--dark); border: none; font-size: 1.2rem; padding: 20px 50px;">🚀
+                Konsultasi Gratis via WhatsApp Sekarang</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="background: #020617; padding: 40px 0; color: white; text-align: center;">
+        <div class="container">
+            <p>&copy; 2025 Sinergi Digital. Seluruh Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/6282133460786?text=Assalamualaikum%20Kak%2C%20saya%20ingin%20tanya%20mengenai%20pembuatan%20website%20sekolah.%20%F0%9F%98%8A"
+        target="_blank" rel="noopener noreferrer" class="wa-float" title="Chat WhatsApp">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.438 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.435 5.61 1.436h.005c6.551 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script>
+        // 1. Intersection Observer for Reveal Animations
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Stagger effect for grid items
+                    const delay = entry.target.dataset.delay || 0;
+                    setTimeout(() => {
+                        entry.target.classList.add('active');
+                    }, delay);
+
+                    // Trigger counter if it's a trust item
+                    if (entry.target.classList.contains('trust-item')) {
+                        animateCounter(entry.target.querySelector('h3'));
+                    }
+
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal, .trust-item').forEach((el, i) => {
+            // Auto-assign staggered delay to children of grids
+            const parentGrid = el.closest('.pain-grid, .pricing-grid, .trust-grid');
+            if (parentGrid) {
+                const indexInGrid = Array.from(parentGrid.children).indexOf(el);
+                el.dataset.delay = indexInGrid * 150;
+            }
+            revealObserver.observe(el);
+        });
+
+        // 2. Counter Animation for Trust Stats
+        function animateCounter(el) {
+            const target = parseFloat(el.innerText.replace(/[^0-9.]/g, ''));
+            const suffix = el.innerText.replace(/[0-9.]/g, '');
+            const duration = 2000;
+            const startTime = performance.now();
+
+            function update(now) {
+                const progress = Math.min((now - startTime) / duration, 1);
+                const easedProgress = 1 - Math.pow(1 - progress, 4); // Ease out quart
+                const current = progress === 1 ? target : (target * easedProgress);
+
+                el.innerText = (target % 1 === 0 ? Math.floor(current) : current.toFixed(1)) + suffix;
+
+                if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+        }
+
+        // 3. FAQ Accordion with smooth transitions
+        const faqs = document.querySelectorAll('.faq-item');
+        faqs.forEach(faq => {
+            faq.querySelector('.faq-header').addEventListener('click', () => {
+                const isOpen = faq.classList.contains('faq-open');
+                faqs.forEach(f => f.classList.remove('faq-open'));
+                if (!isOpen) faq.classList.add('faq-open');
+            });
+        });
+
+        // 4. Navbar scroll state
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // 5. Advanced Ripple Effect
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('mouseenter', function () {
+                this.classList.add('btn-hover');
+            });
+
+            btn.addEventListener('click', function (e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+
+                ripple.style.width = ripple.style.height = `${size}px`;
+                ripple.style.left = `${x}px`;
+                ripple.style.top = `${y}px`;
+                ripple.classList.add('ripple');
+
+                this.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+
+        // 6. Simple Parallax for Hero Image
+        window.addEventListener('mousemove', (e) => {
+            const img = document.querySelector('.school-mockup img');
+            if (!img) return;
+            const x = (window.innerWidth / 2 - e.pageX) / 50;
+            const y = (window.innerHeight / 2 - e.pageY) / 50;
+            img.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`;
+        });
+    </script>
+</body>
+
+</html>
