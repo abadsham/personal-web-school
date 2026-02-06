@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jasa pembuatan website profesional untuk Sekolah, Pesantren, dan Travel Umroh. Modern, cepat, SEO-friendly, dan terpercaya. Solusi digital terbaik 2025.">
-    <meta name="keywords" content="jasa pembuatan website sekolah, website pesantren profesional, jasa website travel umroh, website umroh terpercaya, pembuatan website lembaga pendidikan">
-    <title>Sinergi Digital | Jasa Website Sekolah & Travel Umroh Premium</title>
-    
+    <meta name="description"
+        content="Jasa pembuatan website sekolah dan pesantren profesional. Tingkatkan jumlah pendaftar PPDB dengan website yang meyakinkan, modern, dan terpercaya.">
+    <meta name="keywords"
+        content="jasa pembuatan website sekolah, website pesantren profesional, pendaftaran siswa online, website pendidikan terbaik, solusi ppdb digital">
+    <title>Sinergi Digital | Website Sekolah Profesional & PPDB Online</title>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <style>
         /* 
-        ========================================
-        MODERN 2025 DESIGN SYSTEM
-        ========================================
-        */
+            ========================================
+            MODERN 2025 ACADEMIC DESIGN SYSTEM
+            ========================================
+            */
         :root {
-            --primary: #2563eb;
-            --primary-dark: #1e40af;
-            --secondary: #10b981;
+            --primary: #1e40af;
+            /* Trust Blue */
+            --primary-light: #3b82f6;
             --accent: #f59e0b;
+            /* Academic Gold */
+            --secondary: #10b981;
             --dark: #0f172a;
             --light: #f8fafc;
             --text-main: #334155;
             --text-muted: #64748b;
+            --danger: #ef4444;
             --glass: rgba(255, 255, 255, 0.7);
             --glass-border: rgba(255, 255, 255, 0.3);
             --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -47,18 +54,13 @@
         }
 
         body {
-            font-family: 'Plus+Jakarta+Sans', -apple-system, sans-serif;
+            font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
             background-color: var(--light);
             color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* 
-        ========================================
-        REUSABLE COMPONENTS
-        ========================================
-        */
         .container {
             width: 90%;
             max-width: 1200px;
@@ -69,35 +71,40 @@
             padding: 100px 0;
         }
 
+        /* 
+            ========================================
+            BUTTONS & BADGES
+            ========================================
+            */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 14px 32px;
-            border-radius: 50px;
-            font-weight: 600;
+            padding: 16px 36px;
+            border-radius: 12px;
+            font-weight: 700;
             cursor: pointer;
             transition: var(--transition);
             text-decoration: none;
-            gap: 10px;
+            gap: 12px;
             position: relative;
             overflow: hidden;
+            border: none;
         }
 
         .btn-primary {
-            background-color: var(--primary);
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
             color: white;
-            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 10px 15px -3px rgba(30, 64, 175, 0.3);
         }
 
         .btn-primary:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 25px -5px rgba(30, 64, 175, 0.4);
         }
 
         .btn-outline {
-            background-color: transparent;
+            background-color: white;
             border: 2px solid var(--primary);
             color: var(--primary);
         }
@@ -107,9 +114,21 @@
             color: white;
         }
 
+        .badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(30, 64, 175, 0.1);
+            color: var(--primary);
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            border: 1px solid rgba(30, 64, 175, 0.2);
+        }
+
         .ripple {
             position: absolute;
-            background: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.3);
             transform: translate(-50%, -50%);
             pointer-events: none;
             border-radius: 50%;
@@ -117,66 +136,39 @@
         }
 
         @keyframes ripple-effect {
-            from { width: 0; height: 0; opacity: 0.5; }
-            to { width: 500px; height: 500px; opacity: 0; }
-        }
+            from {
+                width: 0;
+                height: 0;
+                opacity: 1;
+            }
 
-        .badge {
-            display: inline-block;
-            padding: 6px 16px;
-            background: rgba(37, 99, 235, 0.1);
-            color: var(--primary);
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-        }
-
-        h1, h2, h3 {
-            color: var(--dark);
-            font-weight: 800;
-            line-height: 1.2;
-        }
-
-        .section-title {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 60px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .section-title p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
+            to {
+                width: 400px;
+                height: 400px;
+                opacity: 0;
+            }
         }
 
         /* 
-        ========================================
-        NAVBAR
-        ========================================
-        */
+            ========================================
+            NAVBAR
+            ========================================
+            */
         nav {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            padding: 20px 0;
+            padding: 24px 0;
             transition: var(--transition);
         }
 
         nav.scrolled {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(15px);
-            padding: 15px 0;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            padding: 16px 0;
             box-shadow: var(--shadow-md);
-            border-bottom: 1px solid var(--glass-border);
         }
 
         .nav-content {
@@ -192,52 +184,36 @@
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 30px;
+            gap: 32px;
         }
 
         .nav-links a {
             text-decoration: none;
             color: var(--dark);
             font-weight: 600;
-            font-size: 0.95rem;
             transition: var(--transition);
         }
 
         .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            gap: 6px;
-            cursor: pointer;
-        }
-
-        .menu-toggle span {
-            width: 25px;
-            height: 3px;
-            background-color: var(--dark);
-            border-radius: 3px;
+            color: var(--primary-light);
         }
 
         /* 
-        ========================================
-        HERO SECTION
-        ========================================
-        */
+            ========================================
+            HERO SECTION
+            ========================================
+            */
         .hero {
-            position: relative;
             padding: 180px 0 100px;
-            background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.05), transparent),
-                        radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.05), transparent);
-            min-height: 90vh;
+            background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent),
+                radial-gradient(circle at 10% 80%, rgba(245, 158, 11, 0.05), transparent);
+            min-height: 95vh;
             display: flex;
             align-items: center;
         }
@@ -245,16 +221,15 @@
         .hero-grid {
             display: grid;
             grid-template-columns: 1.2fr 0.8fr;
-            gap: 60px;
+            gap: 64px;
             align-items: center;
         }
 
         .hero-text h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: clamp(2.5rem, 5vw, 3.8rem);
             margin-bottom: 24px;
-            background: linear-gradient(to right, var(--dark), var(--primary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--dark);
+            line-height: 1.1;
         }
 
         .hero-text p {
@@ -262,6 +237,8 @@
             margin-bottom: 40px;
             color: var(--text-muted);
             max-width: 600px;
+            border-left: 4px solid var(--accent);
+            padding-left: 20px;
         }
 
         .hero-cta {
@@ -274,524 +251,250 @@
             position: relative;
         }
 
-        .hero-img-stack {
-            position: relative;
-            width: 100%;
-            height: 400px;
-        }
-
-        .hero-card {
-            position: absolute;
+        .school-mockup {
             background: white;
-            border-radius: 20px;
+            border-radius: 24px;
+            padding: 15px;
             box-shadow: var(--shadow-lg);
-            padding: 20px;
+            transform: perspective(1000px) rotateY(-10deg) rotateX(5deg);
             transition: var(--transition);
-            animation: float 6s ease-in-out infinite;
         }
 
-        .hero-card-1 { 
-            width: 80%; top: 0; left: 0; z-index: 2; 
-        }
-        .hero-card-2 { 
-            width: 60%; bottom: 0; right: 0; z-index: 1; 
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            animation-delay: 2s;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+        .school-mockup:hover {
+            transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
         }
 
         /* 
-        ========================================
-        TRUST INDICATORS
-        ========================================
-        */
-        .trust-section {
-            background: white;
-            padding: 60px 0;
-            border-top: 1px solid #f1f5f9;
-            border-bottom: 1px solid #f1f5f9;
-        }
-
-        .trust-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            text-align: center;
-        }
-
-        .stat-item h3 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 5px;
-        }
-
-        .stat-item p {
-            font-weight: 600;
-            color: var(--text-muted);
-        }
-
-        /* 
-        ========================================
-        SERVICES SECTION
-        ========================================
-        */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background: white;
-            padding: 40px;
-            border-radius: 30px;
-            border: 1px solid #f1f5f9;
-            transition: var(--transition);
+            ========================================
+            PAIN SECTION (MASALAH NYATA)
+            ========================================
+            */
+        .pain-section {
+            background: #fff;
             position: relative;
             overflow: hidden;
         }
 
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--primary);
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 60px;
         }
 
-        .service-icon {
-            width: 70px;
-            height: 70px;
-            background: rgba(37, 99, 235, 0.1);
+        .pain-card {
+            padding: 40px;
             border-radius: 20px;
+            background: #fdfdfd;
+            border: 1px solid #f1f5f9;
+            transition: var(--transition);
+        }
+
+        .pain-card:hover {
+            border-color: var(--danger);
+            background: #fffafa;
+        }
+
+        .pain-icon {
+            width: 54px;
+            height: 54px;
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--danger);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 25px;
-            color: var(--primary);
+            margin-bottom: 24px;
         }
 
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+        /* 
+            ========================================
+            TRUST INDICATORS
+            ========================================
+            */
+        .trust-banner {
+            background: var(--primary);
+            padding: 80px 0;
+            color: white;
         }
 
-        .service-list {
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .trust-item h3 {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .trust-item p {
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        /* 
+            ========================================
+            SOLUSI & LAYANAN
+            ========================================
+            */
+        .service-card {
+            background: white;
+            padding: 50px;
+            border-radius: 32px;
+            border: 1px solid #e2e8f0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .service-features {
             list-style: none;
-            margin-top: 20px;
+            margin: 30px 0;
         }
 
-        .service-list li {
-            margin-bottom: 12px;
+        .service-features li {
+            margin-bottom: 16px;
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 0.95rem;
+            gap: 12px;
+            font-weight: 600;
         }
 
-        .service-list li svg {
+        .service-features li svg {
             color: var(--secondary);
             flex-shrink: 0;
         }
 
         /* 
-        ========================================
-        BENEFITS SECTION
-        ========================================
-        */
-        .benefits {
-            background-color: var(--dark);
-            color: white;
+            ========================================
+            PRICING
+            ========================================
+            */
+        .pricing-section {
+            background: #f1f5f9;
         }
 
-        .benefits h2, .benefits h3 {
-            color: white;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .benefit-item {
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: var(--transition);
-        }
-
-        .benefit-item:hover {
-            background: rgba(255, 255, 255, 0.1);
-            transform: scale(1.05);
-        }
-
-        .benefit-item svg {
-            width: 40px;
-            height: 40px;
-            color: var(--secondary);
-            margin-bottom: 20px;
-        }
-
-        /* 
-        ========================================
-        PORTFOLIO
-        ========================================
-        */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .portfolio-card {
-            border-radius: 24px;
-            overflow: hidden;
-            position: relative;
-            aspect-ratio: 4/3;
-            cursor: pointer;
-        }
-
-        .portfolio-img {
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            transition: var(--transition);
-        }
-
-        .portfolio-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 30px;
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .portfolio-card:hover .portfolio-overlay {
-            opacity: 1;
-        }
-
-        .portfolio-card:hover .portfolio-img {
-            transform: scale(1.1);
-        }
-
-        /* 
-        ========================================
-        TESTIMONIALS
-        ========================================
-        */
-        .testimonial-slider {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-
-        .slider-container {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .slide {
-            min-width: 100%;
-            padding: 40px;
-            text-align: center;
-        }
-
-        .testimonial-content {
-            background: white;
-            padding: 50px;
-            border-radius: 30px;
-            box-shadow: var(--shadow-lg);
-            position: relative;
-        }
-
-        .testimonial-content p {
-            font-size: 1.2rem;
-            font-style: italic;
-            margin-bottom: 30px;
-        }
-
-        .author h4 {
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-        }
-
-        .author span {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        .slider-nav {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 30px;
-        }
-
-        .dot {
-            width: 10px;
-            height: 10px;
-            background: #cbd5e1;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .dot.active {
-            background: var(--primary);
-            width: 30px;
-            border-radius: 10px;
-        }
-
-        /* 
-        ========================================
-        PRICING
-        ========================================
-        */
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
+            gap: 32px;
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
         .pricing-card {
             background: white;
             padding: 50px 40px;
-            border-radius: 30px;
-            border: 1px solid #f1f5f9;
-            text-align: center;
+            border-radius: 24px;
+            border: 1px solid #e2e8f0;
             transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card.featured {
+            border: 3px solid var(--primary);
+            transform: scale(1.05);
             position: relative;
         }
 
-        .pricing-card.recommended {
-            border-color: var(--primary);
-            box-shadow: var(--shadow-lg);
-            transform: scale(1.05);
-            z-index: 2;
-        }
-
-        .pricing-card.recommended::before {
-            content: 'Paling Populer';
+        .pricing-card.featured::after {
+            content: 'PALING DIPILIH';
             position: absolute;
             top: -15px;
             left: 50%;
             transform: translateX(-50%);
-            background: var(--primary);
-            color: white;
-            padding: 5px 20px;
+            background: var(--accent);
+            color: var(--dark);
+            padding: 4px 16px;
             border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-        }
-
-        .price {
-            font-size: 2.5rem;
+            font-size: 0.75rem;
             font-weight: 800;
-            margin: 20px 0;
         }
 
-        .price span {
+        .price h4 {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .price .amount {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--dark);
+        }
+
+        .price .amount span {
             font-size: 1rem;
             color: var(--text-muted);
-            font-weight: 400;
-        }
-
-        .pricing-features {
-            list-style: none;
-            margin: 30px 0;
-            text-align: left;
-        }
-
-        .pricing-features li {
-            margin-bottom: 15px;
-            display: flex;
-            gap: 10px;
-            font-size: 0.95rem;
         }
 
         /* 
-        ========================================
-        FAQ
-        ========================================
-        */
-        .faq-wrapper {
+            ========================================
+            FAQ
+            ========================================
+            */
+        .faq-container {
             max-width: 800px;
             margin: 0 auto;
         }
 
         .faq-item {
-            background: white;
-            border-radius: 20px;
-            margin-bottom: 15px;
-            box-shadow: var(--shadow-sm);
-            overflow: hidden;
-            border: 1px solid #f1f5f9;
+            margin-bottom: 16px;
+            border-bottom: 1px solid #e2e8f0;
         }
 
         .faq-header {
-            padding: 25px;
+            padding: 24px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
             cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .faq-header:hover {
-            background-color: #f8fafc;
-        }
-
-        .faq-header h4 {
-            font-size: 1.1rem;
-        }
-
-        .faq-icon {
-            transition: var(--transition);
-        }
-
-        .faq-item.active .faq-icon {
-            transform: rotate(180deg);
         }
 
         .faq-content {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.4s ease;
-            padding: 0 25px;
+            transition: max-height 0.3s ease-out;
         }
 
-        .faq-item.active .faq-content {
+        .faq-item.faq-open .faq-content {
             max-height: 200px;
-            padding-bottom: 25px;
+            padding-bottom: 24px;
         }
 
         /* 
-        ========================================
-        FINAL CTA
-        ========================================
-        */
+            ========================================
+            FINAL CTA
+            ========================================
+            */
         .final-cta {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            background: var(--dark);
             color: white;
+            padding: 120px 0;
             text-align: center;
         }
 
         .final-cta h2 {
+            font-size: 3.5rem;
             color: white;
-            font-size: 3rem;
-            margin-bottom: 25px;
-        }
-
-        .final-cta p {
-            font-size: 1.25rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-bottom: 24px;
         }
 
         /* 
-        ========================================
-        FOOTER
-        ========================================
-        */
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 80px 0 30px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 50px;
-            margin-bottom: 60px;
-        }
-
-        .footer-brand p {
-            margin-top: 20px;
-            opacity: 0.7;
-        }
-
-        .footer-links h4 {
-            margin-bottom: 25px;
-            font-size: 1.2rem;
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links ul li {
-            margin-bottom: 12px;
-        }
-
-        .footer-links ul li a {
-            color: white;
-            text-decoration: none;
-            opacity: 0.7;
-            transition: var(--transition);
-        }
-
-        .footer-links ul li a:hover {
-            opacity: 1;
-            padding-left: 5px;
-        }
-
-        .copyright {
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            text-align: center;
-            font-size: 0.9rem;
-            opacity: 0.6;
-        }
-
-        /* 
-        ========================================
-        FLOATING BUTTON
-        ========================================
-        */
-        .wa-float {
-            position: fixed;
-            bottom: 40px;
-            right: 40px;
-            width: 65px;
-            height: 65px;
-            background: #25d366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
-            z-index: 999;
-            transition: var(--transition);
-            cursor: pointer;
-        }
-
-        .wa-float:hover {
-            transform: scale(1.1) rotate(10deg);
-        }
-
-        /* 
-        ========================================
-        ANIMATIONS (SCROLL)
-        ========================================
-        */
+            ========================================
+            REVEAL ANIMATIONS
+            ========================================
+            */
         .reveal {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(40px);
             transition: all 0.8s ease-out;
         }
 
@@ -801,356 +504,392 @@
         }
 
         /* 
-        ========================================
-        RESPONSIVE
-        ========================================
-        */
+            ========================================
+            RESPONSIVE
+            ========================================
+            */
         @media (max-width: 992px) {
             .hero-grid {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-            .hero-text h1 { font-size: 3rem; }
-            .hero-text p { margin: 0 auto 40px; }
-            .hero-cta { justify-content: center; }
-            .hero-visual { display: none; }
-            
-            .nav-links { display: none; }
-            .menu-toggle { display: flex; }
-            
-            .section-title h2 { font-size: 2rem; }
+
+            .hero-text p {
+                margin: 0 auto 40px;
+                padding-left: 0;
+                border-left: none;
+            }
+
+            .hero-cta {
+                justify-content: center;
+            }
+
+            .service-card {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
         }
 
-        @media (max-width: 768px) {
-            .section-padding { padding: 60px 0; }
-            .pricing-card.recommended { transform: scale(1); }
-            .wa-float { width: 55px; height: 55px; bottom: 20px; right: 20px; }
+        /* WA FLOAT */
+        .wa-float {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            width: 70px;
+            height: 70px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .wa-float:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
+
 <body>
 
     <!-- NAVBAR -->
     <nav id="navbar">
         <div class="container nav-content">
             <a href="#" class="logo">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="24" height="24" rx="8" fill="var(--primary)"/>
-                    <path d="M12 7L17 10V14L12 17L7 14V10L12 7Z" fill="white"/>
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m4 6 8-4 8 4" />
+                    <path d="m18 10 4 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8l4-2" />
+                    <path d="M14 22v-4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v4" />
+                    <path d="m18 5-1.25 3" />
+                    <path d="M15 13a3 3 0 0 0-6 0" />
                 </svg>
                 SinergiDigital
             </a>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Layanan</a></li>
-                <li><a href="#benefits">Keunggulan</a></li>
-                <li><a href="#portfolio">Portofolio</a></li>
-                <li><a href="#pricing">Harga</a></li>
+                <li><a href="#masalah">Masalah</a></li>
+                <li><a href="#layanan">Layanan</a></li>
+                <li><a href="#keunggulan">Keunggulan</a></li>
+                <li><a href="#harga">Harga</a></li>
             </ul>
-            <a href="#" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.9rem;">Konsultasi</a>
-            <div class="menu-toggle" id="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <a href="https://wa.me/6282133460786?text=Assalamualaikum%20Kak%2C%20saya%20tertarik%20untuk%20konsultasi%20pembuatan%20website%20sekolah%20premium.%20Mohon%20info%20detailnya%20ya%20%F0%9F%98%8A"
+                target="_blank" rel="noopener noreferrer" class="btn btn-primary"
+                style="padding: 12px 24px; font-size: 0.9rem;">Konsultasi Gratis</a>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <section class="hero" id="home">
+    <section class="hero">
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-text">
-                    <span class="badge">Layanan Website Terbaik 2025</span>
-                    <h1>Digitalisasi Sekolah & Travel Umroh Anda.</h1>
-                    <p>Hadirkan kredibilitas dan kemudahan bagi institusi pendidikan serta biro perjalanan Anda lewat platform website yang modern, cepat, dan terpercaya.</p>
+                    <span class="badge">🏫 Dipercaya Sekolah & Pesantren yang Ingin Tumbuh Lebih Cepat</span>
+                    <h1>Sekolah yang Terlihat Profesional Selalu Dipilih Lebih Dulu.</h1>
+                    <p>Di mata wali murid, kualitas sekolah dinilai sebelum mereka datang. Jika website Anda terlihat
+                        biasa saja, mereka tidak akan bertanya — mereka langsung memilih sekolah lain.</p>
                     <div class="hero-cta">
-                        <a href="#services" class="btn btn-primary">Lihat Layanan <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-                        <a href="#portfolio" class="btn btn-outline">Eksplorasi Proyek</a>
+                        <a href="https://wa.me/6282133460786?text=Assalamualaikum%20Kak%2C%20saya%20tertarik%20untuk%20meningkatkan%20pendaftar%20sekolah%20lewat%20website%20premium.%20Bisa%20dibantu%3F%20%F0%9F%98%8A"
+                            target="_blank" rel="noopener noreferrer" class="btn btn-primary">🔥 Tingkatkan Pendaftar
+                            Sekarang</a>
+                        <a href="#layanan" class="btn btn-outline">📊 Lihat Dampak & Hasil Nyata</a>
                     </div>
                 </div>
                 <div class="hero-visual">
-                    <div class="hero-img-stack">
-                        <div class="hero-card hero-card-1">
-                            <div style="width: 100%; height: 180px; background: #f1f5f9; border-radius: 12px; margin-bottom: 15px;"></div>
-                            <div style="height: 12px; width: 60%; background: #e2e8f0; border-radius: 6px; margin-bottom: 8px;"></div>
-                            <div style="height: 12px; width: 40%; background: #e2e8f0; border-radius: 6px;"></div>
-                        </div>
-                        <div class="hero-card hero-card-2">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                                <div style="height: 12px; width: 30%; background: rgba(255,255,255,0.3); border-radius: 6px;"></div>
-                                <div style="height: 24px; width: 24px; background: rgba(255,255,255,0.3); border-radius: 50%;"></div>
-                            </div>
-                            <h4 style="margin-bottom: 10px;">Traffic Growth</h4>
-                            <div style="font-size: 2rem; font-weight: 800;">+245%</div>
-                        </div>
+                    <div class="school-mockup">
+                        <img src="https://images.pexels.com/photos/30945258/pexels-photo-30945258.jpeg"
+                            alt="Website Sekolah Premium"
+                            style="width:100%; height:320px; object-fit:cover; border-radius:12px; display:block;">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TRUST INDICATORS -->
-    <section class="trust-section">
+    <!-- TRUST STATS -->
+    <section class="trust-banner">
         <div class="container">
             <div class="trust-grid">
-                <div class="stat-item">
-                    <h3><span class="counter" data-target="150">0</span>+</h3>
-                    <p>Sekolah & Pesantren</p>
+                <div class="trust-item">
+                    <h3>150+</h3>
+                    <p>Sekolah & Pesantren Meningkat Pendaftar</p>
                 </div>
-                <div class="stat-item">
-                    <h3><span class="counter" data-target="80">0</span>+</h3>
-                    <p>Travel Umroh & Hajj</p>
+                <div class="trust-item">
+                    <h3>+30-50%</h3>
+                    <p>Kenaikan Minat PPDB Setelah Website Aktif</p>
                 </div>
-                <div class="stat-item">
-                    <h3><span class="counter" data-target="98">0</span>%</h3>
-                    <p>Kepuasan Klien</p>
+                <div class="trust-item">
+                    <h3>98%</h3>
+                    <p>Kepuasan Pengelola Sekolah</p>
                 </div>
-                <div class="stat-item">
-                    <h3><span class="counter" data-target="10">0</span>+</h3>
-                    <p>Tahun Pengalaman</p>
+                <div class="trust-item">
+                    <h3>10+ Thn</h3>
+                    <p>Pengalaman di Sistem Digital Pendidikan</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES -->
-    <section class="section-padding" id="services">
+    <!-- PAIN SECTION (PROBLEM) -->
+    <section class="section-padding pain-section" id="masalah">
         <div class="container">
-            <div class="section-title reveal">
-                <span class="badge">Layanan Kami</span>
-                <h2>Solusi Spesialis Untuk Industri Anda</h2>
-                <p>Kami tidak hanya membuat website, kami membangun ekosistem digital yang mempermudah operasional dan manajemen data Anda.</p>
+            <div class="reveal" style="text-align: center; max-width: 800px; margin: 0 auto 60px;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Kenapa PPDB Tidak Pernah Maksimal?</h2>
+                <p style="font-size: 1.1rem; color: var(--text-muted);">Hampir semua sekolah menghadapi masalah yang
+                    sama, namun hanya sedikit yang berani memperbaikinya.</p>
             </div>
-            
-            <div class="services-grid">
-                <!-- Website Sekolah -->
-                <div class="service-card reveal">
-                    <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-                    </div>
-                    <h3>Website Sekolah & Pesantren</h3>
-                    <p>Platform terintegrasi untuk pendaftaran siswa (PPDB), profil lembaga, galeri kegiatan, hingga manajemen data alumni.</p>
-                    <ul class="service-list">
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Sistem PPDB Online</li>
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Integrasi Media Sosial</li>
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Management Berita & Artikel</li>
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> SEO Local Sekolah</li>
+            <div class="pain-grid">
+                <div class="pain-card reveal">
+                    <div class="pain-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg></div>
+                    <h3>Wali Murid Ragu</h3>
+                    <p>Website terlihat kuno membuat orang tua berpikir kualitas sekolah Anda juga ketinggalan zaman.
+                    </p>
+                </div>
+                <div class="pain-card reveal">
+                    <div class="pain-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                        </svg></div>
+                    <h3>Info PPDB Berantakan</h3>
+                    <p>Informasi tersebar di berbagai platform membuat calon wali murid bingung dan memilih mundur.</p>
+                </div>
+                <div class="pain-card reveal">
+                    <div class="pain-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg></div>
+                    <h3>Admin Kewalahan</h3>
+                    <p>Menjawab pertanyaan yang sama setiap hari via WA karena informasi di website tidak jelas.</p>
+                </div>
+            </div>
+            <div class="reveal" style="text-align: center; margin-top: 60px; font-weight: 700; color: var(--danger);">
+                "Orang tua tidak membandingkan kualitas dari visi. Mereka membandingkan dari tampilan pertama."
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUSI & LAYANAN -->
+    <section class="section-padding" id="layanan">
+        <div class="container">
+            <div class="reveal" style="text-align: center; margin-bottom: 60px;">
+                <h2 style="font-size: 2.8rem;">Website Sekolah yang Bekerja</h2>
+                <p style="font-size: 1.2rem;">Mendatangkan Murid, Bukan Sekadar Online.</p>
+            </div>
+
+            <div class="service-card reveal">
+                <div>
+                    <h3 style="font-size: 2rem; margin-bottom: 20px;">Layanan Utama — Website Sekolah & Pesantren</h3>
+                    <p>Website terintegrasi untuk sekolah & pesantren yang ingin terlihat modern, mempermudah
+                        pendaftaran, dan mengelola info tanpa ribet.</p>
+                    <ul class="service-features">
+                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> PPDB Online (Daftar ≤ 3 Menit)</li>
+                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Profil Sekolah & Program Unggulan</li>
+                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Management Berita & Prestasi</li>
+                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> SEO Lokal (Mudah dicari di Google)</li>
                     </ul>
+                    <a href="https://wa.me/6282133460786?text=Assalamualaikum%20Kak%2C%20saya%20tertarik%20dengan%20layanan%20Website%20Sekolah%20%26%20Pesantren.%20Mohon%20info%20detailnya.%20%F0%9F%98%8A"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-primary">Pesan Sekarang</a>
                 </div>
-
-                <!-- Website Travel Umroh -->
-                <div class="service-card reveal" style="animation-delay: 0.2s;">
-                    <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
-                    </div>
-                    <h3>Website Travel Umroh & Hajj</h3>
-                    <p>Tingkatkan kepercayaan calon jamaah dengan landing page paket yang informatif, jadwal keberangkatan, dan fitur testimoni.</p>
-                    <ul class="service-list">
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Katalog Paket Umroh</li>
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Countdown Keberangkatan</li>
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Booking via WhatsApp</li>
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Fitur Itinerary Jamaah</li>
-                    </ul>
+                <div style="height: 100%; border-radius: 20px; overflow: hidden;">
+                    <img src="https://images.pexels.com/photos/14536291/pexels-photo-14536291.jpeg"
+                        alt="Sistem Dashboard Sekolah"
+                        style="width:100%; height:100%; object-fit:cover; display:block; min-height: 400px;">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- BENEFITS -->
-    <section class="section-padding benefits" id="benefits">
+    <!-- KEUNGGULAN (BENEFITS) -->
+    <section class="section-padding" style="background: #fff;" id="keunggulan">
         <div class="container">
-            <div class="section-title reveal">
-                <span class="badge" style="background: rgba(255,255,255,0.1); color: white;">Mengapa Memilih Kami?</span>
-                <h2>Kualitas Premium, Hasil Nyata</h2>
+            <div class="reveal" style="text-align: center; margin-bottom: 60px;">
+                <h2 style="font-size: 2.5rem;">Keunggulan Nyata Untuk Sekolah</h2>
             </div>
-            <div class="benefits-grid">
-                <div class="benefit-item reveal">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    <h3>Performa Sangat Cepat</h3>
-                    <p>Optimasi kode agar website terbuka secepat kilat di semua perangkat, meningkatkan ranking Google.</p>
+            <div class="pain-grid">
+                <div class="pain-card reveal" style="border-left: 5px solid var(--secondary);">
+                    <h3>📈 Lebih Banyak Pendaftar</h3>
+                    <p>Website dirancang khusus untuk meyakinkan orang tua sejak 10 detik pertama.</p>
                 </div>
-                <div class="benefit-item reveal" style="animation-delay: 0.1s;">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-                    <h3>Mobile Responsive</h3>
-                    <p>Tampilan yang menyesuaikan sempurna di smartphone, tablet, maupun komputer desktop.</p>
+                <div class="pain-card reveal" style="border-left: 5px solid var(--primary);">
+                    <h3>💸 Kurangi Biaya Operasional</h3>
+                    <p>Hemat jutaan rupiah biaya cetak brosur. Website menjawab pertanyaan 24 jam.</p>
                 </div>
-                <div class="benefit-item reveal" style="animation-delay: 0.2s;">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    <h3>Keamanan Terjamin</h3>
-                    <p>Protokol SSL dan sistem proteksi data untuk melindungi informasi lembaga dan jamaah Anda.</p>
-                </div>
-                <div class="benefit-item reveal" style="animation-delay: 0.3s;">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-                    <h3>Custom Desain</h3>
-                    <p>Tidak menggunakan template pasaran. Desain eksklusif sesuai dengan identitas branding Anda.</p>
+                <div class="pain-card reveal" style="border-left: 5px solid var(--accent);">
+                    <h3>⚡ Percepat Proses PPDB</h3>
+                    <p>Input mandiri oleh wali murid. Admin hanya fokus seleksi & konfirmasi.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PORTFOLIO -->
-    <section class="section-padding" id="portfolio">
+    <!-- HARGA (PRICING) -->
+    <section class="section-padding pricing-section" id="harga">
         <div class="container">
-            <div class="section-title reveal">
-                <span class="badge">Portofolio</span>
-                <h2>Hasil Karya Kami</h2>
-                <p>Kumpulan proyek terpilih yang telah sukses meraih kepercayaan publik lewat sentuhan digital kami.</p>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-card reveal">
-                    <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=800');"></div>
-                    <div class="portfolio-overlay">
-                        <h3>Pesantren Al-Hikmah</h3>
-                        <p>Web Profil & Sistem Pendaftaran Siswa</p>
-                    </div>
-                </div>
-                <div class="portfolio-card reveal" style="animation-delay: 0.1s;">
-                    <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1591604466107-ec97de577aff?q=80&w=800');"></div>
-                    <div class="portfolio-overlay">
-                        <h3>Nurul Huda School</h3>
-                        <p>Portal Akademik & Berita Terintegrasi</p>
-                    </div>
-                </div>
-                <div class="portfolio-card reveal" style="animation-delay: 0.2s;">
-                    <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1596492783930-4e7485ed9960?q=80&w=800');"></div>
-                    <div class="portfolio-overlay">
-                        <h3>Hajj & Umrah Tour</h3>
-                        <p>Landing Page Paket Keberangkatan</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section class="section-padding" style="background: #f1f5f9;">
-        <div class="container">
-            <div class="section-title reveal">
-                <span class="badge">Testimoni</span>
-                <h2>Apa Kata Mereka?</h2>
-            </div>
-            <div class="testimonial-slider-wrapper">
-                <div class="testimonial-slider" id="testimonialSlider">
-                    <div class="slider-container">
-                        <!-- Slide 1 -->
-                        <div class="slide">
-                            <div class="testimonial-content">
-                                <p>"Sejak menggunakan website baru, pendaftaran santri baru meningkat hingga 40%. Sistemnya pun sangat mudah dikelola oleh admin sekolah kami."</p>
-                                <div class="author">
-                                    <h4>Dr. Ahmad Sulaiman</h4>
-                                    <span>Pimpinan Yayasan Pendidikan</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide 2 -->
-                        <div class="slide">
-                            <div class="testimonial-content">
-                                <p>"Alhamdulillah, jamaah umroh kami merasa lebih percaya setelah melihat website yang profesional. Fitur paket dan jadwal sangat membantu."</p>
-                                <div class="author">
-                                    <h4>Haji Ridwan</h4>
-                                    <span>Owner Travel Umrah Amanah</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide 3 -->
-                        <div class="slide">
-                            <div class="testimonial-content">
-                                <p>"Desain modern dan loading sangat cepat. Tim Sinergi Digital benar-benar paham kebutuhan lembaga pendidikan di era digital saat ini."</p>
-                                <div class="author">
-                                    <h4>Ibu Siti Maryam</h4>
-                                    <span>Kepala Sekolah SDIT Kreatif</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-nav" id="sliderDots"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRICING -->
-    <section class="section-padding" id="pricing">
-        <div class="container">
-            <div class="section-title reveal">
-                <span class="badge">Paket Harga</span>
-                <h2>Pilihan Paket Sesuai Kebutuhan</h2>
+            <div class="reveal" style="text-align: center; margin-bottom: 60px;">
+                <h2 style="font-size: 2.5rem;">Investasi Masa Depan Sekolah</h2>
+                <p>Harga transparan, hasil terjamin.</p>
             </div>
             <div class="pricing-grid">
-                <!-- Basic -->
+                <!-- ENTRY PACKAGE -->
                 <div class="pricing-card reveal">
-                    <h3>Basic</h3>
-                    <div class="price">2.5jt <span>/ Sekali</span></div>
-                    <ul class="pricing-features">
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" color="#10b981"><polyline points="20 6 9 17 4 12"></polyline></svg> 5 Halaman Utama</li>
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" color="#10b981"><polyline points="20 6 9 17 4 12"></polyline></svg> Domain & Hosting (1 Thn)</li>
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" color="#10b981"><polyline points="20 6 9 17 4 12"></polyline></svg> Responsive Design</li>
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" color="#10b981"><polyline points="20 6 9 17 4 12"></polyline></svg> Link WhatsApp</li>
+                    <div class="price">
+                        <h4>Paket Entry</h4>
+                        <div class="amount">Rp 1.5jt<span> /sekali</span></div>
+                    </div>
+                    <ul class="service-features" style="flex-grow: 1;">
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Landing Page Berkualitas</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Maksimal 3 Halaman</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Domain & Hosting (1 Thn)</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Integrasi WhatsApp</li>
                     </ul>
-                    <a href="#" class="btn btn-outline" style="width: 100%;">Pilih Paket</a>
+                    <a href="https://wa.me/6282133460786?text=Assalamualaikum%20Kak%2C%20saya%20tertarik%20dengan%20Paket%20Entry%20website%20sekolah%20(1.5jt).%20Bisa%20dibantu%3F%20%F0%9F%98%8A"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-outline">Pilih Paket</a>
                 </div>
-                <!-- Premium -->
-                <div class="pricing-card recommended reveal" style="animation-delay: 0.1s;">
-                    <h3>Pro Business</h3>
-                    <div class="price">4.5jt <span>/ Sekali</span></div>
-                    <ul class="pricing-features">
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" color="#10b981"><polyline points="20 6 9 17 4 12"></polyline></svg> Halaman Tanpa Batas</li>
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" color="#10b981"><polyline points="20 6 9 17 4 12"></polyline></svg> Sistem PPDB / Katalog Paket</li>
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" color="#10b981"><polyline points="20 6 9 17 4 12"></polyline></svg> SEO Optimasi (On Page)</li>
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" color="#10b981"><polyline points="20 6 9 17 4 12"></polyline></svg> CMS (Edit Konten Sendiri)</li>
+
+                <!-- BASIC PACKAGE -->
+                <div class="pricing-card featured reveal">
+                    <div class="price">
+                        <h4>Paket Basic</h4>
+                        <div class="amount">Rp 2jt<span> /sekali</span></div>
+                    </div>
+                    <ul class="service-features" style="flex-grow: 1;">
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> 10 Halaman Utama</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Domain & Hosting (1 Thn)</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Desain Mobile Friendly</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Integrasi WhatsApp</li>
                     </ul>
-                    <a href="#" class="btn btn-primary" style="width: 100%;">Mulai Sekarang</a>
+                    <a href="https://wa.me/6282133460786?text=Assalamualaikum%20Kak%2C%20saya%20tertarik%20dengan%20Paket%20Basic%20website%20sekolah.%20Bisa%20dibantu%3F%20%F0%9F%98%8A"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-primary">Tingkatkan Pendaftar</a>
                 </div>
-                <!-- Custom -->
-                <div class="pricing-card reveal" style="animation-delay: 0.2s;">
-                    <h3>Custom Elite</h3>
-                    <div class="price">Call <span>/ Kontak Us</span></div>
-                    <ul class="pricing-features">
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" color="#10b981"><polyline points="20 6 9 17 4 12"></polyline></svg> Fitur Custom Khusus</li>
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" color="#10b981"><polyline points="20 6 9 17 4 12"></polyline></svg> Multi-bahasa</li>
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" color="#10b981"><polyline points="20 6 9 17 4 12"></polyline></svg> Integrasi API Pihak Ketiga</li>
-                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" color="#10b981"><polyline points="20 6 9 17 4 12"></polyline></svg> Support Prioritas 24/7</li>
+
+                <!-- PRO PACKAGE -->
+                <div class="pricing-card reveal">
+                    <div class="price">
+                        <h4>Pro Business</h4>
+                        <div class="amount">Rp 4.5jt<span> /sekali</span></div>
+                    </div>
+                    <ul class="service-features" style="flex-grow: 1;">
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Halaman Tidak Terbatas</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Sistem PPDB Online</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> SEO Optimasi (On Page)</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> CMS (Edit Konten Sendiri)</li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" color="#10b981">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Support Teknis Prioritas</li>
                     </ul>
-                    <a href="#" class="btn btn-outline" style="width: 100%;">Tanya Detail</a>
+                    <a href="https://wa.me/6282133460786?text=Assalamualaikum%20Kak%2C%20saya%20tertarik%20dengan%20Paket%20Pro%20Business%20untuk%20sekolah%20saya.%20Mohon%20infonya.%20%F0%9F%98%8A"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-outline">Pilih Paket</a>
                 </div>
             </div>
+            <p style="text-align: center; margin-top: 30px; font-style: italic; color: var(--text-muted);">* Lebih murah
+                daripada kehilangan calon siswa setiap tahun.</p>
         </div>
     </section>
 
     <!-- FAQ -->
     <section class="section-padding">
         <div class="container">
-            <div class="section-title reveal">
-                <span class="badge">Tanya Jawab</span>
-                <h2>Pertanyaan Sering Diajukan</h2>
-            </div>
-            <div class="faq-wrapper">
+            <h2 style="text-align: center; margin-bottom: 50px;">Pertanyaan Seputar Website Sekolah</h2>
+            <div class="faq-container">
                 <div class="faq-item reveal">
                     <div class="faq-header">
-                        <h4>Berapa lama proses pengerjaan website?</h4>
-                        <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+                        <h4>Berapa lama pengerjaan website?</h4>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
                     </div>
                     <div class="faq-content">
-                        <p>Untuk paket Basic, biasanya memakan waktu 7-10 hari kerja. Sedangkan untuk paket Pro Business atau Custom bisa memakan waktu 2-4 minggu tergantung kompleksitas fitur.</p>
+                        <p>Paket Basic memakan waktu 7-10 hari kerja. Paket Pro Business membutuhkan waktu 2-4 minggu
+                            karena adanya integrasi sistem PPDB.</p>
                     </div>
                 </div>
                 <div class="faq-item reveal">
                     <div class="faq-header">
-                        <h4>Apakah website bisa diedit sendiri?</h4>
-                        <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+                        <h4>Apakah admin sekolah bisa edit sendiri?</h4>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
                     </div>
                     <div class="faq-content">
-                        <p>Ya, tentu saja. Untuk paket Pro ke atas, kami menyertakan sistem CMS (Content Management System) yang memudahkan Anda mengganti teks, gambar, atau menambah paket umroh tanpa perlu koding.</p>
+                        <p>Ya, tentu saja. Kami memberikan akses CMS yang user-friendly sehingga admin tidak perlu
+                            keahlian IT untuk mengupdate berita atau foto.</p>
                     </div>
                 </div>
                 <div class="faq-item reveal">
                     <div class="faq-header">
-                        <h4>Apakah sudah termasuk domain dan hosting?</h4>
-                        <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
+                        <h4>Apakah sudah termasuk domain & hosting?</h4>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
                     </div>
                     <div class="faq-content">
-                        <p>Betul, semua paket kami sudah termasuk sewa domain (.com / .sch.id / .id) dan hosting selama 1 tahun pertama.</p>
+                        <p>Betul, biaya sudah termasuk sewa domain dan hosting berkualitas untuk 1 tahun pertama.</p>
                     </div>
                 </div>
             </div>
@@ -1158,191 +897,73 @@
     </section>
 
     <!-- FINAL CTA -->
-    <section class="section-padding final-cta">
-        <div class="container">
-            <div class="reveal">
-                <h2>Siap Untuk Mengudara Secara Digital?</h2>
-                <p>Ambil langkah pertama Anda sekarang. Konsultasikan kebutuhan digital instansi Anda bersama tim ahli kami secara gratis.</p>
-                <div class="hero-cta">
-                    <a href="#" class="btn btn-primary" style="background-color: white; color: var(--primary);">Hubungi WhatsApp Kami</a>
-                    <a href="#services" class="btn btn-outline" style="border-color: white; color: white;">Lihat Detail Layanan</a>
-                </div>
-            </div>
+    <section class="final-cta section-padding" style="background:#0f172a;">
+        <div class="container reveal">
+            <h2 style="font-size:3rem; margin-bottom: 20px;">Jangan Biarkan Bangku Kosong</h2>
+            <p style="font-size: 1.3rem; opacity: 0.8; max-width: 800px; margin: 0 auto 40px;">Setiap tahun ajaran
+                adalah kesempatan sekali. Sekolah yang siap secara digital, menang lebih awal.</p>
+            <a href="https://wa.me/6282133460786?text=Assalamualaikum%20Kak%2C%20saya%20siap%20konsultasi%20untuk%20pembuatan%20website%20sekolah%20sekarang.%20%F0%9F%98%8A"
+                target="_blank" rel="noopener noreferrer" class="btn btn-primary"
+                style="background: var(--accent); color: var(--dark); border: none; font-size: 1.2rem; padding: 20px 50px;">🚀
+                Konsultasi Gratis via WhatsApp Sekarang</a>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer>
+    <footer style="background: #020617; padding: 40px 0; color: white; text-align: center;">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="#" class="logo" style="color: white;">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="24" height="24" rx="8" fill="var(--primary)"/>
-                            <path d="M12 7L17 10V14L12 17L7 14V10L12 7Z" fill="white"/>
-                        </svg>
-                        SinergiDigital
-                    </a>
-                    <p>Partner terpercaya dalam menghadirkan solusi digital untuk kemajuan dunia pendidikan dan ibadah.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Layanan</h4>
-                    <ul>
-                        <li><a href="#">Web Sekolah</a></li>
-                        <li><a href="#">Web Pesantren</a></li>
-                        <li><a href="#">Web Travel Umroh</a></li>
-                        <li><a href="#">Audit SEO</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Perusahaan</h4>
-                    <ul>
-                        <li><a href="#">Tentang Kami</a></li>
-                        <li><a href="#">Portofolio</a></li>
-                        <li><a href="#">Kontak</a></li>
-                        <li><a href="#">Kebijakan Privasi</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Kontak Kami</h4>
-                    <p style="opacity: 0.7; font-size: 0.9rem;">
-                        📍 Jakarta, Indonesia<br>
-                        📧 info@sinergidigital.com<br>
-                        📞 +62 812 3456 7890
-                    </p>
-                </div>
-            </div>
-            <div class="copyright">
-                &copy; 2025 SinergiDigital. Seluruh Hak Cipta Dilindungi.
-            </div>
+            <p>&copy; 2025 Sinergi Digital. Seluruh Hak Cipta Dilindungi.</p>
         </div>
     </footer>
 
-    <!-- WA FLOAT -->
-    <a href="#" class="wa-float">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.438 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.435 5.61 1.436h.005c6.551 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <!-- WA BUTTON -->
+    <a href="https://wa.me/6282133460786?text=Assalamualaikum%20Kak%2C%20saya%20mau%20tanya-tanya%20seputar%20pembuatan%20website%20sekolah.%20%F0%9F%98%8A"
+        target="_blank" rel="noopener noreferrer" class="wa-float">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="white">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.438 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.435 5.61 1.436h.005c6.551 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
     </a>
 
     <!-- SCRIPTS -->
     <script>
-        /* 
-        ========================================
-        VANILLA JAVASCRIPT LOGIC
-        ========================================
-        */
-
-        // 1. Navbar Scroll Effect
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // 2. Mobile Menu Toggle
-        const menuToggle = document.getElementById('mobile-menu');
-        const navLinks = document.querySelector('.nav-links');
-        menuToggle.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = '70px';
-            navLinks.style.left = '0';
-            navLinks.style.width = '100%';
-            navLinks.style.background = 'white';
-            navLinks.style.padding = '20px';
-            navLinks.style.textAlign = 'center';
-            navLinks.style.boxShadow = '0 10px 10px rgba(0,0,0,0.1)';
-        });
-
-        // 3. Reveal Animations on Scroll
-        const reveals = document.querySelectorAll('.reveal');
-        const revealOnScroll = () => {
-            for (let i = 0; i < reveals.length; i++) {
+        // 1. Reveal on scroll
+        const reveal = () => {
+            const reveals = document.querySelectorAll('.reveal');
+            reveals.forEach(el => {
                 const windowHeight = window.innerHeight;
-                const elementTop = reveals[i].getBoundingClientRect().top;
-                const elementVisible = 150;
+                const elementTop = el.getBoundingClientRect().top;
+                const elementVisible = 100;
                 if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add('active');
-                }
-            }
-        };
-        window.addEventListener('scroll', revealOnScroll);
-        revealOnScroll(); // Trigger once on load
-
-        // 4. Animated Counters
-        const counters = document.querySelectorAll('.counter');
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const counter = entry.target;
-                    const target = +counter.getAttribute('data-target');
-                    const updateCount = () => {
-                        const count = +counter.innerText;
-                        const inc = target / 50;
-                        if (count < target) {
-                            counter.innerText = Math.ceil(count + inc);
-                            setTimeout(updateCount, 20);
-                        } else {
-                            counter.innerText = target;
-                        }
-                    };
-                    updateCount();
-                    counterObserver.unobserve(counter);
+                    el.classList.add('active');
                 }
             });
-        }, { threshold: 1 });
-        counters.forEach(c => counterObserver.observe(c));
-
-        // 5. Testimonial Slider
-        const sliderContainer = document.querySelector('.slider-container');
-        const slides = document.querySelectorAll('.slide');
-        const dotsContainer = document.getElementById('sliderDots');
-        let currentSlide = 0;
-
-        // Create dots
-        slides.forEach((_, i) => {
-            const dot = document.createElement('div');
-            dot.classList.add('dot');
-            if (i === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => goToSlide(i));
-            dotsContainer.appendChild(dot);
-        });
-
-        const goToSlide = (n) => {
-            currentSlide = n;
-            sliderContainer.style.transform = `translateX(-${n * 100}%)`;
-            const dots = document.querySelectorAll('.dot');
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === n);
-            });
         };
+        window.addEventListener('scroll', reveal);
+        reveal();
 
-        // Auto slide
-        setInterval(() => {
-            currentSlide = (currentSlide + 1) % slides.length;
-            goToSlide(currentSlide);
-        }, 5000);
-
-        // 6. FAQ Accordion
-        const faqItems = document.querySelectorAll('.faq-item');
-        faqItems.forEach(item => {
-            const header = item.querySelector('.faq-header');
-            header.addEventListener('click', () => {
-                const active = document.querySelector('.faq-item.active');
-                if (active && active !== item) {
-                    active.classList.remove('active');
-                }
-                item.classList.toggle('active');
+        // 2. FAQ Accordion
+        const faqs = document.querySelectorAll('.faq-item');
+        faqs.forEach(faq => {
+            faq.querySelector('.faq-header').addEventListener('click', () => {
+                faqs.forEach(f => {
+                    if (f !== faq) f.classList.remove('faq-open');
+                });
+                faq.classList.toggle('faq-open');
             });
         });
 
-        // 7. Ripple Effect on Buttons
-        const btns = document.querySelectorAll('.btn');
-        btns.forEach(btn => {
-            btn.addEventListener('click', function(e) {
+        // 3. Navbar scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        });
+
+        // 4. Ripple effect on buttons
+        const btnElements = document.querySelectorAll('.btn');
+        btnElements.forEach(btn => {
+            btn.addEventListener('click', function (e) {
                 const x = e.clientX - e.target.offsetLeft;
                 const y = e.clientY - e.target.offsetTop;
                 const ripple = document.createElement('span');
@@ -1353,21 +974,7 @@
                 setTimeout(() => ripple.remove(), 600);
             });
         });
-
-        // 8. Smooth Scroll for Nav Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
     </script>
 </body>
+
 </html>
